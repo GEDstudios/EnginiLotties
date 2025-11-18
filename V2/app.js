@@ -16,11 +16,11 @@
             description: 'Standard idle state and the requested purplish variant.',
             animations: [
                 { 
-                    fileName: "Idle.json", 
+                    fileName: "idle.json", 
                     animationType: "playOnce" 
                 },
                 { 
-                    fileName: "Idle Purplish.json", 
+                    fileName: "idle Purplish.json", 
                     animationType: "playOnce",
                     feedback: "New purplish tint"
                 }
