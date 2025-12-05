@@ -19,6 +19,7 @@
             --purple: #5533FF;
             --purple-glow: rgba(85, 51, 255, 0.3);
             --blue: #41B1FF;
+            --green: #00D1FF; /* Added a cyan/teal variant for variety if needed, defaulting to purple below */
             
             --grid-line: rgba(255, 255, 255, 0.03);
         }
@@ -44,7 +45,7 @@
 
         .main-container {
             width: 100%;
-            max-width: 1000px;
+            max-width: 1200px; /* Increased width slightly to accommodate 3 columns comfortably */
             padding: 40px;
             box-sizing: border-box;
             animation: fade-in 0.8s ease-out;
@@ -76,14 +77,21 @@
         /* --- Layout Grid --- */
         .dashboard-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Changed to equal columns for symmetry */
+            /* CHANGED: 3 equal columns for side-by-side layout */
+            grid-template-columns: repeat(3, 1fr); 
             gap: 30px;
             align-items: stretch;
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 1000px) {
             .dashboard-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr; /* 2 columns on medium screens */
+            }
+        }
+
+        @media (max-width: 650px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr; /* Stack on mobile */
             }
         }
 
@@ -96,7 +104,7 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            height: 100%; /* Ensure full height */
+            height: 100%;
             box-sizing: border-box;
         }
 
@@ -278,10 +286,10 @@
                     <a href="Logo/V2/index.html" class="nav-item primary">
                         <div class="version-tag">
                             V2 
-                            <span class="sub">LATEST BUILD</span>
+                            <span class="sub">LATEST</span>
                         </div>
                         <div class="version-desc">
-                            Implementation of post-review corrections and refinements.
+                            Implementation of post-review corrections.
                         </div>
                         <div class="open-link">
                             OPEN PROJECT &rarr;
@@ -307,13 +315,33 @@
                             <span class="sub">INTERACTIVE</span>
                         </div>
                         <div class="version-desc">
-                            Loop, Freeze, and Loader interaction patterns.
                         </div>
                         <div class="open-link">
                             OPEN PROJECT &rarr;
                         </div>
                     </a>
-                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">UI Animations</span>
+                </div>
+
+                <div class="nav-container">
+                    <a href="UI/index.html" class="nav-item primary">
+                        <div class="version-tag">
+                            UI 
+                            <span class="sub">FULL WIDTH</span>
+                        </div>
+                        <div class="version-desc">
+                            
+                        </div>
+                        <div class="open-link">
+                            OPEN PROJECT &rarr;
+                        </div>
+                    </a>
+                </div>
             </div>
 
         </div>
