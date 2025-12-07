@@ -10,6 +10,7 @@
         {
             id: 'ui-list',
             animations: [
+                { fileName: "Electricity.lottie" },
                 { fileName: "UI_1.lottie" },
                 { fileName: "UI_2.lottie" },
                 { fileName: "UI_3.lottie", isTBD: true },
